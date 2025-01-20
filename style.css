@@ -32,6 +32,9 @@ a{
 ul{
     list-style-type: none;
 }
+.display{
+    display: none;
+}
 
 .button{
     font-weight: 700;
@@ -238,14 +241,13 @@ nav .button{
     margin: 80px 0;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
-    /* gap: 30px; */
+    gap: 20px;
 }
 
 /* card1 style  */
 #card1{
     border-radius: 16px;
-    max-width: 540px;
+    max-width: 50%;
     background: var(--white);
     position: relative;
 }
@@ -279,7 +281,7 @@ nav .button{
     color: var(--white);
     background-color: #3CD8E8;
     position: absolute;
-    top: 55%;
+    bottom: 16em;
     left: 6%;
 }
 
@@ -301,7 +303,7 @@ nav .button{
     border-radius: 16px 16px 0 0;
 }
 
-.card-date{
+.card-date {
     font-weight: 500;
     font-size: 15px;
     padding: 11px 19px;
@@ -309,8 +311,8 @@ nav .button{
     color: var(--white);
     background-color: #95B226;
     position: absolute;
-    top: 55%;
-    left: 15%;
+    bottom: 116px;
+    left: 14%;
 }
 
 .card-tittle {
@@ -320,7 +322,11 @@ nav .button{
     padding: 38px 20px 33px 45px;
 }
 
-
+.stories .button{
+    padding: 10px 47px;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
 
 
 
@@ -330,13 +336,20 @@ nav .button{
     .container{
         margin: 0 16px;
     }
-
+    .button {
+        font-size: 15px;
+    }
+    
+    .display{
+        display: block;
+    }
+    
     #icon{
         display: block;
         font-size: 30px;
     }
-
-    nav > .logo > h1, nav > ul, nav .button{
+    
+    nav > .logo > h1, nav > ul, nav .button, .angle-btn, #card1{
         display: none;
     }
 
@@ -387,6 +400,32 @@ nav .button{
         font-size: 16px;
         padding: 6px 24px;
     }
+
+    .main-section {
+        padding: 20px 0;
+    }
+
+    .section-tittle {
+        font-size: 26px;
+    }
+
+    .curriculum-container{
+        margin: 40px auto;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .card-container {
+        margin: 40px 0;
+    }
+    .card2{
+        /* grid-template-columns: repeat(2,1fr); */
+        gap: 11px;
+    }
+
+    .card-date {
+        font-size: 9px;
+        border-radius: 28px;
+    }
+
 }
 
 /* Tablets responsive  */
@@ -394,7 +433,11 @@ nav .button{
     .container{
         margin: 0 30px;
     }
-
+    
+    .display{
+        display: block;
+    }
+    
     #icon{
         display: block;
         font-size: 30px;
@@ -417,4 +460,48 @@ nav .button{
         display: block;
         border-bottom: 0.5px solid var(--orange);
     }
+
+    .right-banner{
+        max-width: calc(100% - 16px);
+    }
+
+    .right-banner img{
+        width: 100%;
+    }
+
+    .left-banner{
+        max-width: calc(100% - 16px);
+        gap: 18px;
+        text-align: center;
+    }
+
+    .banner-tittle{
+        max-width: 335px;
+        font-size: 32px;
+        margin: 0 auto;
+    }
+
+    .banner-disc{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .left-banner button{
+        font-size: 16px;
+        padding: 6px 24px;
+    }
+
+    .main-section {
+        padding: 20px 0;
+    }
+
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-date {
+        font-size: 9px;
+        border-radius: 28px;
+    }
+
+
 }
