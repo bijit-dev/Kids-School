@@ -154,6 +154,16 @@ nav .button{
     color: var(--black);
 }
 
+/* marquee style */
+.marq {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--white);
+    background: #f0a800a0;
+}
 
 /* curriculum style */
 .curriculum-container{
@@ -166,7 +176,7 @@ nav .button{
 }
 
 .curriculum-card{
-    border-radius: 18.86px;
+    border-radius: 19px;
     box-shadow: 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
 }
 /* card background color and border  */
@@ -184,7 +194,6 @@ nav .button{
 }
 
 .curriculum-card .img-div{
-    /* width: 37px; */
     padding: 32px 0;
 
 }
@@ -252,12 +261,27 @@ nav .button{
     border-radius: 16px;
     max-width: 50%;
     background: var(--white);
-    position: relative;
 }
 
+#image{
+    position: relative;
+
+}
 #card1 img{
     width: 100%;
     border-radius: 16px 16px 0 0;
+}
+
+#card1-date{
+    font-weight: 500;
+    font-size: 15px;
+    padding: 15px 19px;
+    border-radius: 48px;
+    color: var(--white);
+    background-color: #3CD8E8;
+    position: absolute;
+    bottom: -6%;
+    left: 6%;
 }
 
 .card1-text{
@@ -276,18 +300,6 @@ nav .button{
     color: #666666;
 }
 
-#card1-date{
-    font-weight: 500;
-    font-size: 15px;
-    padding: 15px 19px;
-    border-radius: 48px;
-    color: var(--white);
-    background-color: #3CD8E8;
-    position: absolute;
-    bottom: 16em;
-    left: 6%;
-}
-
 /* card style */
 .card2{
     display: grid;
@@ -298,9 +310,12 @@ nav .button{
     max-width: 290px;
     border-radius: 16px;
     background: var(--white);
-    position: relative;
 }
 
+.card .image{
+    position: relative;
+
+}
 .card  img{
     width: 100%;
     border-radius: 16px 16px 0 0;
@@ -314,7 +329,7 @@ nav .button{
     color: var(--white);
     background-color: #95B226;
     position: absolute;
-    bottom: 116px;
+    bottom: -8%;
     left: 14%;
 }
 
@@ -466,23 +481,54 @@ footer .div3 .flax{
         margin: 40px auto;
         grid-template-columns: repeat(1,1fr);
     }
+    .curriculum-card .disc {
+        margin: 0 auto;
+    }
+
     .card-container {
         margin: 40px 0;
     }
+    
     .card2{
-        /* grid-template-columns: repeat(2,1fr); */
         gap: 11px;
     }
 
     .card-date {
         font-size: 9px;
+        padding: 6px 11px;
         border-radius: 28px;
+        bottom: -3%;
+        left: 10%;
+    }
+    .card-tittle {
+        font-size: 10px;
+        padding: 25px 20px 33px 23px;
+    }
+    footer .div1 h1 {
+        font-size: 36px;
+    }
+    footer .div1 .disc {
+        font-size: 16px;
+    }
+
+    footer .div2 h3 {
+    font-size: 24px;
+    margin-bottom: 26px;
+    }
+    footer .div2 ul a {
+    font-size: 17px;
+    margin-bottom: 16px;
+    }
+    footer .div3 h2 {
+    font-size: 22px;
+    margin-bottom: 28px;
     }
 
 }
 
 /* Tablets responsive  */
 @media screen and (min-width: 576px) and (max-width: 768px) {
+
     .container{
         margin: 0 30px;
     }
@@ -550,15 +596,177 @@ footer .div3 .flax{
     .main-section {
         padding: 20px 0;
     }
+    .curriculum-container {
+        margin: 40px auto;
+        grid-template-columns: repeat(2,1fr);
+    }
 
     .card-container{
         flex-direction: column;
         align-items: center;
     }
+
+    #card1 {
+        max-width: calc(100% - 16px);
+        margin: 0 auto;
+    }
+    #card1-date {
+        font-size: 12px;
+        padding: 13px 19px;
+        left: 8%;
+    }
+    .card1-text {
+        padding: 45px 38px 42px;
+    }
+    .card1-tittle {
+        font-size: 20px;
+        padding-bottom: 25px;
+    }
+
     .card-date {
-        font-size: 9px;
+        font-size: 11px;
+        padding: 6px 11px;
         border-radius: 28px;
+        bottom: -3%;
+    }
+    .card-tittle {
+        font-size: 12px;
+    }
+    footer .div1 h1 {
+        font-size: 36px;
+    }
+    footer .div1 .disc {
+        font-size: 18px;
+    }
+    footer .div2 h3 {
+    font-size: 24px;
+    margin-bottom: 26px;
+    }
+    footer .div2 ul a {
+    font-size: 17px;
+    margin-bottom: 16px;
+    }
+    footer .div3 h2 {
+    font-size: 22px;
+    margin-bottom: 28px;
+    }
+
+}
+
+
+/* Large responsive */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .container{
+        margin: 0 30px;
+    }
+    
+    nav{
+        padding: 12px 0;
+    }
+    
+    nav > .logo > .img{
+        width: 46px;
+        height: 46px;
+    }
+    
+    hr{
+        display: block;
+        border-bottom: 0.5px solid var(--orange);
+    }
+
+    .right-banner{
+        margin-top: 20px;
+        max-width: calc(100% - 16px);
+    }
+
+    .right-banner img{
+        width: 100%;
+    }
+
+    .left-banner{
+        max-width: calc(100% - 16px);
+        gap: 18px;
+        text-align: center;
+    }
+
+    .banner-tittle{
+        max-width: 335px;
+        font-size: 32px;
+        margin: 0 auto;
+    }
+
+    .banner-disc{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .left-banner button{
+        font-size: 16px;
+        padding: 6px 24px;
+    }
+
+    .main-section {
+        padding: 20px 0;
+    }
+    
+
+    .card-container{
+        align-items: center;
+    }
+
+    #card1 {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    #card1-date {
+        font-size: 12px;
+        padding: 13px 19px;
+        left: 8%;
+    }
+    .card1-text {
+        padding: 45px 38px 42px;
+    }
+    .card1-tittle {
+        font-size: 20px;
+        padding-bottom: 25px;
+    }
+
+    
+    .card-date {
+        font-size: 11px;
+        padding: 6px 11px;
+        border-radius: 28px;
+        bottom: -3%;
+    }
+    .card-tittle {
+        font-size: 12px;
     }
 
 
+    footer .div1 h1 {
+        font-size: 36px;
+    }
+    footer .div1 .disc {
+        font-size: 18px;
+    }
+    footer .div2 h3 {
+    font-size: 24px;
+    margin-bottom: 26px;
+    }
+    footer .div2 ul a {
+    font-size: 17px;
+    margin-bottom: 16px;
+    }
+    footer .div3 h2 {
+    font-size: 22px;
+    margin-bottom: 28px;
+    }
+
+}
+
+/* Extra large responsive */
+@media screen and (min-width: 992px) and (max-width: 1160px) {
+    .container{
+        margin: 0 30px;
+    }
 }
