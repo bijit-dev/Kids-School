@@ -32,6 +32,9 @@ a{
 ul{
     list-style-type: none;
 }
+.flax{
+    display: flex;
+}
 .display{
     display: none;
 }
@@ -328,6 +331,51 @@ nav .button{
     transform: translate(-50%);
 }
 
+/* footer style */
+footer{
+    background-color: var(--blue);
+    padding: 120px 0;
+    color: var(--white);
+}
+footer .container{
+    justify-content: space-between;
+}
+
+footer .div1 h1{
+    font-weight: 700;
+    font-size: 42px;
+    width: min-content;
+}
+footer .div1 .disc{
+    font-weight: 400;
+    font-size: 20px;
+    width: 400px;
+    margin-top: 35px;
+}
+
+footer .div2 h3{
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+footer .div2 ul a{
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--white);
+
+}
+
+footer .div3 h2{
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 32px;
+}
+
+footer .div3 .flax{
+    gap: 10px;
+}
 
 
 
@@ -335,6 +383,10 @@ nav .button{
 @media screen and (max-width: 576px) {
     .container{
         margin: 0 16px;
+    }
+    footer > .flax{
+        flex-direction: column;
+        gap: 32px;
     }
     .button {
         font-size: 15px;
@@ -433,11 +485,14 @@ nav .button{
     .container{
         margin: 0 30px;
     }
-    
+    footer > .flax{
+        flex-direction: column;
+        gap: 32px;
+    }
     .display{
         display: block;
     }
-    
+
     #icon{
         display: block;
         font-size: 30px;
